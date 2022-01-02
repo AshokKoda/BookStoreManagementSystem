@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import entity.User;
+import exception.BSMSException;
 import implementation.UserImplementation;
 
 public class UserTest {
@@ -17,7 +18,7 @@ public class UserTest {
 	}
 	
 	@Test
-	public void addUserTest() {
+	public void addUserTest() throws BSMSException {
 		User user = new User("101","Ashok","7396382672","koda@gmail.com","Vizag");
 		int res = userService.add(user);
 		Assert.assertEquals(1, res);
